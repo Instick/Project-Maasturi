@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{FC434F52-0DD9-3C32-0214-E1BED586F681}</ProjectGuid>
+	<ProjectGuid>{C19EB50C-9F96-3276-6ADE-B3692DB7C916}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\SUV\PlayerControl.cs" />
+     <Compile Include="Assets\Water Flow Free\Scripts\WaterFlow.cs" />
+     <Compile Include="Assets\Water Flow Free\Scripts\WaterFlowDemo.cs" />
+     <Compile Include="Assets\Water Flow Free\Scripts\WaterFlowOrbitCamera.cs" />
+     <None Include="Assets\Wood texture floor_01\readme.txt" />
+     <None Include="Assets\Water Flow Free\Shaders\Water Simple.shader" />
+     <None Include="Assets\Water Flow Free\!Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
