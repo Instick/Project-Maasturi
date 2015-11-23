@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\SUV\PlayerControl.cs" />
+     <Compile Include="Assets\Spin.cs" />
      <Compile Include="Assets\Water Flow Free\Scripts\WaterFlow.cs" />
      <Compile Include="Assets\Water Flow Free\Scripts\WaterFlowDemo.cs" />
      <Compile Include="Assets\Water Flow Free\Scripts\WaterFlowOrbitCamera.cs" />
