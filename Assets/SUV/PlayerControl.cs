@@ -8,6 +8,15 @@ public class PlayerControl : MonoBehaviour
     public float maxMotorTorque; // maximum torque the motor can apply to wheel
     public float maxSteeringAngle; // maximum steer angle the wheel can have
 
+	void Update()
+	{
+		if (Input.GetKeyDown (KeyCode.KeypadEnter))
+
+		
+			Application.LoadLevel("Scene1");
+
+	}
+
     public void FixedUpdate()
     {
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
