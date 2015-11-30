@@ -16,7 +16,9 @@
 	// Update is called once per frame
 	function Update () {
 	
-		 if (Input.GetKeyDown(KeyCode.V) && (Camera_FPS.enabled == true || CameraTest.enabled == true)) {
+    
+	    
+	 if (Input.GetKeyDown(KeyCode.V) && (Camera_FPS.enabled == true || CameraTest.enabled == true)) {
      Camera_FPS.enabled = false;
      Camera_3rd.enabled = true;
      CameraTest.enabled = false;

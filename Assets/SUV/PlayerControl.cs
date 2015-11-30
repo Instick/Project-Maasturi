@@ -8,14 +8,17 @@ public class PlayerControl : MonoBehaviour
     public float maxMotorTorque; // maximum torque the motor can apply to wheel
     public float maxSteeringAngle; // maximum steer angle the wheel can have
 
+    public int iGasPumps = 0;
+
 	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.KeypadEnter))
-
-		
-			Application.LoadLevel("Scene1");
-
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Application.LoadLevel(0);
+                      
+        }
 	}
+
 
     public void FixedUpdate()
     {
@@ -36,6 +39,22 @@ public class PlayerControl : MonoBehaviour
             }
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Moorgaas")
+        {
+            //Debug.Log("Etappi");
+            other.gameObject.SetActive(false);
+            iGasPumps = iGasPumps + 1;
+
+            if (iGasPumps == 4)
+            {
+                Application.LoadLevel(1);
+            }
+        }
+    }
+
 }
 
 [System.Serializable]
