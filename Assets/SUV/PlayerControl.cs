@@ -44,14 +44,18 @@ public class PlayerControl : MonoBehaviour
     {
         if (other.gameObject.tag == "Moorgaas")
         {
-            //Debug.Log("Etappi");
+            Debug.Log("Etappi");
             other.gameObject.SetActive(false);
             iGasPumps = iGasPumps + 1;
 
             if (iGasPumps == 4)
             {
-                Application.LoadLevel(1);
+                Application.LoadLevel("Scene2");
             }
+			if (iGasPumps == 8)
+			{
+				Application.LoadLevel("Scene3");
+			}
         }
     }
 
