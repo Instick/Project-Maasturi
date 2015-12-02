@@ -50,8 +50,10 @@
      <Compile Include="Assets\Textures\Water Flow Free\Scripts\WaterFlow.cs" />
      <Compile Include="Assets\Textures\Water Flow Free\Scripts\WaterFlowDemo.cs" />
      <Compile Include="Assets\Textures\Water Flow Free\Scripts\WaterFlowOrbitCamera.cs" />
+     <None Include="Assets\Rune Assets\Singles\Rune&apos;s Low Poly Mini Truck\Shader\runevehshader.shader" />
      <None Include="Assets\Textures\Wood texture floor_01\readme.txt" />
      <None Include="Assets\Textures\Water Flow Free\Shaders\Water Simple.shader" />
+     <None Include="Assets\Textures\Bike\Shaders\AlphaTest_Complete.shader" />
      <None Include="Assets\Textures\Water Flow Free\!Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

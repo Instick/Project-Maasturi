@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+[RequireComponent(typeof(AudioSource))]
 
 public class PlayerControl : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class PlayerControl : MonoBehaviour
     public float speed;
     public float maxSpeed = 150;
 
+	public AudioClip Horn;
+	AudioSource audio;
+
     //GUI Texture for dial
     public Texture2D speedOMeterDial;
     public Texture2D speedOMeterPointer;
@@ -23,6 +27,13 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
+		if (Input.GetKeyDown(KeyCode.Space)) 
+		{
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.Play();
+			audio.Play(1000);
+		}
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             Application.LoadLevel(0);
