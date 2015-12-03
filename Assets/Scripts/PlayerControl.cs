@@ -27,6 +27,11 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
+		if (Input.GetKeyDown (KeyCode.Y)) 
+		{
+			Application.LoadLevel("SceneBonus");
+		}
+
 		if (Input.GetKeyDown(KeyCode.Space)) 
 		{
 			AudioSource audio = GetComponent<AudioSource>();
@@ -102,8 +107,7 @@ public class PlayerControl : MonoBehaviour
 
         if (Event.current.type.Equals(EventType.Repaint))
         {
-            speedOMeterDial.alphaIsTransparency = true;
-            speedOMeterPointer.alphaIsTransparency = true;
+           
             Graphics.DrawTexture(rect, speedOMeterDial);
             // Graphics.DrawTexture(rect, speedOMeterDial);
 
