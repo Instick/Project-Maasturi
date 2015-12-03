@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+
 [RequireComponent(typeof(AudioSource))]
 
 public class PlayerControl : MonoBehaviour
@@ -21,9 +23,21 @@ public class PlayerControl : MonoBehaviour
     public Texture2D speedOMeterDial;
     public Texture2D speedOMeterPointer;
 
+    public Text tGasPumps;
+
+    private Rigidbody rb;
+
     int minAnglePointer = -90;
     int maxAnglePointer = 180;
 
+    void Start()
+    {
+
+        rb = GetComponent<Rigidbody>();
+        iGasPumps = 0;
+        tGasPumps.text = iGasPumps.ToString();
+
+    }
 
     void Update()
     {
@@ -53,8 +67,6 @@ public class PlayerControl : MonoBehaviour
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
 
-        Rigidbody rb;
-        rb = GetComponent<Rigidbody>();
         speed = rb.angularVelocity.magnitude * 3.6f * 2; //rigidbody.velocity.magnitude * 3.6f;
         if (speed > maxSpeed)
         {
@@ -85,6 +97,8 @@ public class PlayerControl : MonoBehaviour
             other.gameObject.SetActive(false);
             iGasPumps = iGasPumps + 1;
 
+            tGasPumps.text = iGasPumps.ToString();
+
             if (iGasPumps == 4)
             {
                 Application.LoadLevel("Scene2");
@@ -92,6 +106,10 @@ public class PlayerControl : MonoBehaviour
             if (iGasPumps == 8)
             {
                 Application.LoadLevel("Scene3");
+            }
+            if (iGasPumps == 12)
+            {
+                Application.LoadLevel("SceneBonus");
             }
         }
     }
