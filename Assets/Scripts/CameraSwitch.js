@@ -5,7 +5,8 @@
 	var CameraTest : Camera;
 
 	// Use this for initialization
-	function Start () {
+	function Start () 
+	{
 			
 		Camera_FPS.enabled = true;
 		Camera_3rd.enabled = false;
@@ -14,24 +15,31 @@
 	}
 	
 	// Update is called once per frame
-	function Update () {
+	function Update () 
+	{
 	
     
-	    
-	 if (Input.GetKeyDown(KeyCode.V) && (Camera_FPS.enabled == true || CameraTest.enabled == true)) {
-     Camera_FPS.enabled = false;
-     Camera_3rd.enabled = true;
-     CameraTest.enabled = false;
-     }
-     else if (Input.GetKeyDown(KeyCode.B) && (Camera_3rd.enabled == true || Camera_FPS.enabled == true)) {
-     Camera_FPS.enabled = false;
-     Camera_3rd.enabled = false;
-     CameraTest.enabled = true;
-     }
-     else if (Input.GetKeyDown(KeyCode.C) && (Camera_3rd.enabled == true || CameraTest.enabled == true)) {
-     Camera_FPS.enabled = true;
-     Camera_3rd.enabled = false;
-     CameraTest.enabled = false;
-     }
+		if (Input.GetKeyDown(KeyCode.C))
+		{
+			
+			 if (Camera_FPS.enabled == true)
+			 {
+				 Camera_FPS.enabled = false;
+				 Camera_3rd.enabled = true;
+				 CameraTest.enabled = false;
+			 }
+			 else if (Camera_3rd.enabled == true)
+			 {
+				 Camera_FPS.enabled = false;
+				 Camera_3rd.enabled = false;
+				 CameraTest.enabled = true;
+			 }
+			 else if (CameraTest.enabled == true) 
+			 {
+				 Camera_FPS.enabled = true;
+				 Camera_3rd.enabled = false;
+				 CameraTest.enabled = false;
+			 }
 
+		}
 	}

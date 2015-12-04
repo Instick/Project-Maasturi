@@ -17,7 +17,6 @@ public class PlayerControl : MonoBehaviour
 	public float maxSpeed = 150;
 	
 	public AudioClip Horn;
-	AudioSource audio;
 	
 	//GUI Texture for dial
 	public Texture2D speedOMeterDial;
@@ -71,7 +70,7 @@ public class PlayerControl : MonoBehaviour
 		float motor = maxMotorTorque * Input.GetAxis("Vertical");
 		float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
 		
-		speed = rb.angularVelocity.magnitude * 3.6f * 2; //rigidbody.velocity.magnitude * 3.6f;
+		speed = rb.angularVelocity.magnitude * 3.6f; //rigidbody.velocity.magnitude * 3.6f;
 		if (speed > maxSpeed)
 		{
 			motor = 0;
@@ -105,7 +104,7 @@ public class PlayerControl : MonoBehaviour
 			
 			tGasPumps.text = iGasPumps.ToString();
 			
-			if (iGasPumps == 4)
+			if (iGasPumps == 1)
 			{
 				Application.LoadLevel(i + 1);
 			}
@@ -116,8 +115,7 @@ public class PlayerControl : MonoBehaviour
 	{
 		Rect rect = new Rect(0, Screen.height - 200, 200, 200);
 		
-		
-		
+			
 		//Rect rect = new Rect(10,10, 200, 200);
 		
 		

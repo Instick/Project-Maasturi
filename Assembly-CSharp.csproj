@@ -45,8 +45,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\MusicControl.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\Spin.cs" />
+     <Compile Include="Assets\Scripts\StartGame.cs" />
      <Compile Include="Assets\Textures\Water Flow Free\Scripts\WaterFlow.cs" />
      <Compile Include="Assets\Textures\Water Flow Free\Scripts\WaterFlowDemo.cs" />
      <Compile Include="Assets\Textures\Water Flow Free\Scripts\WaterFlowOrbitCamera.cs" />
